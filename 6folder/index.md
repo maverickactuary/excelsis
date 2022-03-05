@@ -1,6 +1,6 @@
 ---
 layout: default
-folder: /5folder/
+folder: /6folder/
 title: Front matter title
 ---
 
