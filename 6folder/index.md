@@ -4,6 +4,6 @@ folder: /6folder/
 title: Front matter title
 ---
 
-## Hello from 5folder
+## Hello from About and contact
 
 [Go home](/)
