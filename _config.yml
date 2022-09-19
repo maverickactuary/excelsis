@@ -1,0 +1,13 @@
+url: https://myquickstart.netlify.app/
+show_drafts: false
+exclude:
+  - netlify.toml
+  - README.md
+markdown: kramdown
+"[markdown]": {
+        "editor.quickSuggestions": true
+    }
+kramdown:
+math_engine: KaTex
+gems:
+  - jekyll-liquify

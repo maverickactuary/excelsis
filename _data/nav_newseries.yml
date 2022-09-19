@@ -1,0 +1,11 @@
+- lname: Article 1 of a new series.
+  ldesc: Part 1 is in the past.
+  fname: /newseries/part1
+  
+- lname: Article 2 of a new series.
+  ldesc: Part 2 is in the past.
+  fname: /newseries/part2
+
+- lname: Article 3 of a new series.
+  ldesc: Part 3 is in the past.
+  fname: /newseries/part3

@@ -1,0 +1,226 @@
+/* AKH 29/04/2022 - avoid increasing use of inline styles ...  */
+/* Header row - assumes no thead */
+.header tr:nth-child(1) {background-color:lightgrey; color:black; font-weight:bold} 
+/* Footer i.e. last row */
+/*tr.header, tr.total, .total tr:last-of-type  {background-color:red!important; color:black; font-weight:bold} */
+
+div.total  tr:last-of-type, .total tr:last-of-type  {background-color:lightgrey!important; color:black; font-weight:bold}
+/* Total in row (not header/footer) */
+tr.subtotal {background-color:#CCCCFF!important; color:black; font-weight:bold} 
+
+/* Table body */
+.striped tr:nth-child(even) {
+	background-color: #f2f2f2;
+  }
+
+/* .hello tr:nth-child(12) > td  {white-space: nowrap!important; color:red;} */
+tr > td:nth-child(1)  {white-space: nowrap;}
+
+.nowrap td {white-space: nowrap; color: red;}
+
+/* Alignment */
+
+table.r1 tr:nth-child(1) {text-align: right;}
+table.r2 tr:nth-child(2) {text-align: right;}
+table.r3 tr:nth-child(3) {text-align: right;}
+
+table.l1 tr:nth-child(1) {text-align: left;}
+table.l2 tr:nth-child(2) {text-align: left;}
+table.l3 tr:nth-child(3) {text-align: left;}
+
+table.c2 tr:nth-child(2) {text-align: center;}
+
+table tr.stop  	{background-color:red!important; color:white;}
+table tr.ready	{background-color:orange!important; color:white;}
+table tr.go  	{background-color:#32CD32!important; color:white;}
+
+.red  	{color: red;}
+.green 	{color: green;}
+.green 	{color: green;}
+
+.strike		 	{text-decoration: line-through;}
+.vh             {visibility:hidden;} 
+
+/* AKH 22/03/2021 - none of this seems to be being picked up! */
+
+#project-name { /* Replace h1 etc with a div#id */
+	font-size: 1.75rem;
+	margin-top: 0;
+	margin-bottom: 0;	font-weight: bold;
+}
+
+.fleft { float: left;
+		padding-right:20px;}
+
+@media only screen and (max-width: 470px) {
+    .fleft {
+        float:none;
+	    }
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+.centrediv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+.displayed {
+	display: block;
+	margin-left: auto;
+	margin-right: auto }
+
+.width100 {
+	width: 100%;
+	height: auto;
+  }
+
+.box {
+	border: 1px solid;
+	padding: 10px 10px 0px 10px;
+	/* box-shadow: 5px 10px 8px #888888; */
+	background: #c8dbf9;
+	background: #eee;
+  }
+
+
+@media print {
+    header, #Header, #Footer { display: none !important; }
+}
+
+
+#skip-to-content {
+	display: none
+}
+
+.r1 td:nth-child(1), .r1 th:nth-child(1),
+.r2 td:nth-child(2), .r2 th:nth-child(2),
+.r3 td:nth-child(3), .r3 th:nth-child(3),
+.r4 td:nth-child(4), .r4 th:nth-child(4),
+.r5 td:nth-child(5), .r5 th:nth-child(5),
+.r6 td:nth-child(6), .r6 th:nth-child(6),
+.r7 td:nth-child(7), .r7 th:nth-child(7),
+.r8 td:nth-child(8), .r8 th:nth-child(8),
+.r9 td:nth-child(9), .r9 th:nth-child(9) { text-align:right }
+
+.c1 td:nth-child(1), .c1 th:nth-child(1),
+.c2 td:nth-child(2), .c2 th:nth-child(2),
+.c3 td:nth-child(3), .c3 th:nth-child(3),
+.c4 td:nth-child(4), .c4 th:nth-child(4),
+.c5 td:nth-child(5), .c5 th:nth-child(5),
+.c6 td:nth-child(6), .c6 th:nth-child(6),
+.c7 td:nth-child(7), .c7 th:nth-child(7),
+.c8 td:nth-child(8), .c8 th:nth-child(8),
+.c9 td:nth-child(9), .c9 th:nth-child(9) { text-align:center }
+
+.l1 td:nth-child(1), .l1 th:nth-child(1),
+.l2 td:nth-child(2), .l2 th:nth-child(2),
+.l3 td:nth-child(3), .l3 th:nth-child(3),
+.l4 td:nth-child(4), .l4 th:nth-child(4),
+.l5 td:nth-child(5), .l5 th:nth-child(5),
+.l6 td:nth-child(6), .l6 th:nth-child(6),
+.l7 td:nth-child(7), .l7 th:nth-child(7),
+.l8 td:nth-child(8), .l8 th:nth-child(8),
+.l9 td:nth-child(9), .l9 th:nth-child(9) { text-align:left }
+
+.page-header {
+	padding: 1rem 1rem
+}
+
+header {
+	z-index: 100;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	top: 0
+}
+
+/* nice removal of header 
+https://stackoverflow.com/questions/54164397/bootstrap-4-how-to-make-fixed-top-navbar-disappear-on-scroll/54164631
+and
+https://www.youtube.com/watch?v=LB70WzwBCTo
+*/
+
+#myheader {	
+	transition: top 0.8s;
+}
+
+main#content,
+.maincontent {
+	margin-top: 8rem
+}
+
+h1, h2 {margin-bottom: 0;
+		font-size: 1.8rem;
+}
+
+.project-name {
+	font-size: 1.75rem;
+}
+
+.project-tagline {
+	margin: 0
+}
+
+nav a {
+	color: white;
+	padding: 0.1rem 0.3rem
+}
+
+nav a.active {
+	background-color: #78a6f1;
+	/* cursor: default AKH 25/04/2020 remove as more than one page in folder */
+}
+
+.update {
+	color: red;
+}
+
+.another {
+	color: red!important;
+}
+
+em.update {
+	color: red;
+	font-style: normal;
+}
+
+.highlight {
+	background-color: #E4E4FF;
+	padding: 0.5rem;
+}
+
+.nopadbottom {
+	padding-bottom: 0.01rem;
+}
+
+.nopadding {
+	padding: 0rem
+}
+.main-content p.nobot {
+	margin-bottom: 0
+}
+
+.nobullets {
+	list-style-position: outside;
+	padding: 0 0 0 1rem
+}
+
+ul {
+	list-style-type: square
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+	color: #78a6f1;
+}
+
